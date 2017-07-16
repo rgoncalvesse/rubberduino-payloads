@@ -1,7 +1,7 @@
 Rubberduino-Payloads
 --------------------
 
-Payloads script for arduino (Atmega32U4), inspired by Rubber Ducky.
+Payload scripts for arduino (Atmega32U4), inspired by Rubber Ducky.
 
 ### Documentation
 
@@ -13,11 +13,11 @@ For the time being, only Windows systems are supported.
 
 This directory contains source code to open 'cmd' or 'powershell', using differents ways.
 
-###### Payloads
+##### Payloads
 
 This directory contains differents payloads.
 
-###### Generator
+##### Generator
 
 This last directory contains the rubberduino converter, from :
 

@@ -2,7 +2,10 @@
 
 void setup() {
 
-	// Start CMD
+	/*
+	Start cli prompt here
+	Use delay to fix problems
+	*/
 
 	Keyboard.begin();
 	delay(1000);
@@ -21,6 +24,11 @@ void setup() {
 
 	Keyboard.releaseAll();
 	delay(50);
+
+	/*
+	Your code here
+	Use delay to fix problems
+	*/
 
 }
 

@@ -3,25 +3,24 @@
 #include "Wopen.h"
 #include <Keyboard.h>
 
-/* Exec 'command', print 'command' using Keyboard.h and press KEY_RETURN */
-void Wopen_exec(char command) {
+/* Exec '"cmd"', print '"cmd"' using Keyboard.h and press KEY_RETURN */
+void Wopen_exec() {
 	
-	Keyboard.print(command);
-	
-	delay(10);
+	delay(200);
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
 }
 
-/* Open 'command' with Win+R */
-void Wopen_win_r(char command) {
+/* Open '"cmd"' with Win+R */
+void Wopen_win_r() {
 
+	delay(200);
 	Keyboard.press(KEY_LEFT_GUI);
 	Keyboard.press('r');
 	Keyboard.releaseAll();
-
-	delay(200);
-	Keyboard.print(command);
+	
+	delay(2000);
+	Keyboard.print("cmd");
 
 	delay(200);
 	Keyboard.press(KEY_RETURN);
@@ -29,28 +28,28 @@ void Wopen_win_r(char command) {
 
 }
 
-/* Open 'command' with Windows start menu */
-void Wopen_start_menu(char command) {
+/* Open '"cmd"' with Windows start menu */
+void Wopen_start_menu() {
 	
 	Keyboard.press(KEY_LEFT_GUI);
 	Keyboard.releaseAll();
 	
 	delay(1000);
-	Keyboard.print(command);
+	Keyboard.print("cmd");
 	
 	delay(10);
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
 }
 
-/* Open 'command' as administrator with start menu */
-void Wopen_administrator(char command) {
+/* Open '"cmd"' as administrator with start menu */
+void Wopen_administrator() {
 
 	Keyboard.press(KEY_LEFT_GUI);
 	Keyboard.releaseAll();
 
 	delay(1000);
-	Keyboard.print(command);
+	Keyboard.print("cmd");
 
 	delay(500);
 	Keyboard.press(KEY_LEFT_CTRL);
@@ -64,3 +63,4 @@ void Wopen_administrator(char command) {
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
 }
+

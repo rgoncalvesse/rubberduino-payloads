@@ -12,7 +12,7 @@ Create a partition with fat32, with the label "MyLittlePONEY".
 
 Plug this flash drive before to plug the RubberDuino.
 
-##### Installation of library
+### Installation of library
 
 Installation below is explained using a GNU/Linux system. You can use a similar way or using copy/paste with anoter OS.
 
@@ -26,27 +26,7 @@ Create a link from lib/src to @arduinopath/libraries :
 
 > ln -s rubberduino-payloads/lib/library.properties @arduinopath/libraries/
 
-##### Commands provided by library
+### Payloads
 
-To print a character, word or sentence, and press ENTER :
-
-> Wopen_exec(command)
-
-To launch a program using Win+R :
-
-> Wopen_winr_r(command)
-
-To launch a program using start menu (if Win+R is disabled) :
-
-> Wopen_start_menu(command)
-
-To launch a program as administrator ! :
-
-> Wopen_administrator(command)
-
-More example are available in payloads.
-
-##### Payloads
-
-Payloads exist in root project. Read and modify what you need !
+Payloads are located in root project. Read and modify what you need !
 
